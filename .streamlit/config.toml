@@ -1,0 +1,62 @@
+# [theme]
+
+# # Primary accent for interactive elements 
+# primaryColor = '#E694FF'
+
+# # Background color for the main content area  
+# backgroundColor = '#bbb5f7'   #'rgb(59,68,74)' 00172B
+
+# # Background color for sidebar and most interactive widgets 
+# secondaryBackgroundColor = '#00001c' 
+
+# # Color used for almost all text
+# textColor = '#FFFFFF'
+
+# # Font family for all text in the app, except code blocks
+# # Accepted values (serif | sans serif | monospace) 
+# # Default: "sans serif"
+# font = "sans serif"
+[theme]
+
+# Primary accent for interactive elements 
+primaryColor = '#E6B447'
+
+# Background color for the main content area  
+#backgroundColor = '#131313'
+
+# Background color for sidebar and most interactive widgets 
+secondaryBackgroundColor = '#4A5B8B'
+
+# Color used for almost all text
+textColor = '#19223B'
+
+# Font family for all text in the app, except code blocks
+# Accepted values (serif | sans serif | monospace) 
+# Default: "sans serif"
+font = "sans serif"
+
+# Width of the main content area in pixels
+mainWidth = 800
+
+# Padding for the main content area in pixels
+mainPadding = 20
+
+# Border radius for most interactive widgets
+borderRadius = 5
+
+# Box shadow for most interactive widgets
+boxShadow = '0px 3px 10px rgba(0, 0, 0, 0.1)'
+
+# Styling for the header text
+[theme.Header]
+backgroundColor = '#2C2E33'
+textColor = '#E6B447'
+font = 'Helvetica Neue'
+fontSize = '36px'
+
+# Styling for the sidebar
+[theme.Sidebar]
+backgroundColor = '#2C2E33'
+textColor = '#D9D9D9'
+font = 'Helvetica Neue'
+fontSize = '16px'
