@@ -67,23 +67,56 @@ def css(filename):
     with open(filename) as f:
         st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
 
-css("style/style.css") 
-    
-#Resume image
-st.title("Resume")
-st.markdown("## Yuvraj Singh")
-# res1 = Image.open("images/res1.jpg")
-# res2 = Image.open("images/res2.jpg")
-# st.image(res1, use_column_width=True)
-# st.image(res2,use_column_width=True)
+css("style/style.css")
 
-# PDF file URL
-# pdf_url = "https://github.com/rpj09/Portfolio/blob/master/images/rpjres.pdf?raw=true"
 
-# Download button
-if st.button("Download Resume"):
-    response = requests.get(pdf_url)
-    with open("rpjres.pdf", "wb") as f:
-        f.write(response.content)
-    st.success("Download complete!")
+with st.container():
+    st.write("---")
+    st.header("My Projects")
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(img_proj1)
+
+    with text_column:
+        st.subheader("Movie Recommendation System- MoviesMania")
+        st.write("Wanna make your life easier , I've got something for you")
+        st.write(
+            """
+            ~Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
+            From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
+
+            ~and for developers who want to contribute there is always a place
+            """
+        )
+        st.markdown("[Checkout the project source code here...](https://github.com/YuvrajSingh-mist/MoviesMania)")
+
+with st.container():
+    image_column, text_column = st.columns((1, 2))
+
+    with image_column:
+        st.image(img_proj2)
+
+    with text_column:
+
+        st.subheader("My personal portfolio website")
+
+        st.markdown("[Checkout the project source code here...](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
+
+
+with st.container():
+    image_column, text_column = st.columns((1, 2))
+
+    with image_column:
+        st.image(gireverb, width=200)
+
+    with text_column:
+
+        st.subheader("Fahion Recommendation System- FashionX")
+        st.write("""
+        A Social Media webapp for developers to share their projects and get feedback from other developers.
+        A web app to visualize your github profile and repositories.
+        """)
+
+
+        st.markdown("[Checkout the project source cAutomateode here...](https://github.com/YuvrajSingh-mist/FashionX)")
 

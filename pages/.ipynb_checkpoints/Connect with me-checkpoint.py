@@ -67,23 +67,29 @@ def css(filename):
     with open(filename) as f:
         st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
 
-css("style/style.css") 
+css("style/style.css")
+
+with st.container():
+    st.write("---")
+    st.header("Get in Touch With Me!")
+    st.write("##")
     
-#Resume image
-st.title("Resume")
-st.markdown("## Yuvraj Singh")
-# res1 = Image.open("images/res1.jpg")
-# res2 = Image.open("images/res2.jpg")
-# st.image(res1, use_column_width=True)
-# st.image(res2,use_column_width=True)
+    
+    
+    
+    contact_form = """
+    <form action="https://formsubmit.co/singhripunjay09+portfolio@gmail.com" method="POST">
+        <input type="hidden" name="_captcha value="false">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="your email" required>
+        <textarea name="message" placeholder="Your message here" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    """
 
-# PDF file URL
-# pdf_url = "https://github.com/rpj09/Portfolio/blob/master/images/rpjres.pdf?raw=true"
+    left_column,right_column = st.columns(2)
 
-# Download button
-if st.button("Download Resume"):
-    response = requests.get(pdf_url)
-    with open("rpjres.pdf", "wb") as f:
-        f.write(response.content)
-    st.success("Download complete!")
-
+    with left_column:
+        st.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        st.empty() 
