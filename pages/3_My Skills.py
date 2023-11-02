@@ -2,6 +2,8 @@ import requests
 import streamlit as st
 from PIL import Image
 from streamlit_lottie import st_lottie
+from streamlit_extras.app_logo import app_logo
+
 
 pg_bg_gradient = """
 
@@ -63,6 +65,36 @@ st.markdown(tansbuttonbg1, unsafe_allow_html=True)
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
+def load_lottie(link):
+    r = requests.get(link)
+    if r.status_code !=200:
+        return  None
+    return None if r.status_code != 200 else r.json()
+
+
+
+
+python_lottie = load_lottie("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
+java_lottie = load_lottie("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
+tf_lottie = load_lottie("")
+my_sql_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
+git_lottie = load_lottie("https://assets9.lottiefiles.com/private_files/lf30_03cuemhb.json")
+github_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
+Andorid_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_fztluxdp.json")
+Docker_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
+Linux_lottie = load_lottie("https://assets2.lottiefiles.com/packages/lf20_drcnxdtp.json")
+Xcode_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
+firebase_lottie = load_lottie("https://assets5.lottiefiles.com/private_files/lf30_52jsgl4a.json")
+img_proj1 = Image.open("images/FRIDAY.png")
+img_proj2 = Image.open("images/1.png")
+gireverb = Image.open("images/gitreverb.png")
+github_card = Image.open("images/gitcardmain.png")
+
+
+#Logos
+
+add_logo()
+
 def css(filename):
     with open(filename) as f:
         st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
@@ -70,10 +102,13 @@ def css(filename):
 css("style/style.css")
 
 
+st.markdown("<h1 style='text-align: center; color: black;'>My Skills</h1>", unsafe_allow_html=True)
+st.divider()
+
 
 with st.container():
 
-    st.header("My Skills :")
+    # st.header("My Skills :")
     st.subheader("Languages:")
     with st.container():
         col1, col2, col3 = st.columns([1, 1, 1])
@@ -86,8 +121,7 @@ with st.container():
             #st.image(Image.open('java_logo.png').resize((100,100)), use_column_width=True)
             #st.write("Java")
         with col3:
-            # st_lottie(swift_lottie,height=70,width=70, key="swift", speed=2.5)
-            pass
+            st_lottie(swift_lottie,height=70,width=70, key="swift", speed=2.5)
             #st.image(Image.open('javascript_logo.png').resize((100,100)), use_column_width=True)
             #st.write("Swift")
         with col1:
@@ -142,6 +176,7 @@ with st.container():
             #st.image(Image.open('pycharm_logo.png').resize((100,100)), use_column_width=True)
             #st.write("Docker")
         with col3:
-            st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
+            # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
+            pass
             #st.image(Image.open('mysql_logo.png').resize((100,100)), use_column_width=True)
             #st.write("Xcode")

@@ -55,6 +55,26 @@ hide_streamlit_style = """
 
 #background-image: linear-gradient(to right top, #f4bedc, #e7b8df, #d7b2e3, #c3aee6, #acabe8, #979edb, #8192cd, #6c86bf, #596ea2, #465786, #33416b, #212c51);
 
+
+
+# python_lottie = load_lottie("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
+# java_lottie = load_lottie("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
+# swift_lottie = load_lottie("https://assets3.lottiefiles.com/packages/lf20_inopzfvq.json")
+# my_sql_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
+# git_lottie = load_lottie("https://assets9.lottiefiles.com/private_files/lf30_03cuemhb.json")
+# github_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
+# Andorid_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_fztluxdp.json")
+# Docker_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
+# Linux_lottie = load_lottie("https://assets2.lottiefiles.com/packages/lf20_drcnxdtp.json")
+# Xcode_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
+# firebase_lottie = load_lottie("https://assets5.lottiefiles.com/private_files/lf30_52jsgl4a.json")
+img_proj1 = Image.open("movies-mania.png")
+img_proj2 = Image.open("")
+img_proj3 = Image.open()
+# gireverb = Image.open("images/gitreverb.png")
+# github_card = Image.open("images/gitcardmain.png")
+
+
 #setting configurations
 st.set_page_config(page_title="Yuvraj Singh Portfolio",layout="wide",initial_sidebar_state="expanded")
 st.markdown(pg_bg_gradient, unsafe_allow_html=True)
@@ -107,7 +127,7 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
 
     with image_column:
-        st.image(gireverb, width=200)
+        st.image(img_proj3, width=200)
 
     with text_column:
 

@@ -3,7 +3,8 @@ import streamlit as st
 from PIL import Image
 from streamlit_lottie import st_lottie
 from streamlit_extras.switch_page_button import switch_page
-
+import json
+from streamlit_option_enu import option_menu
 
 pg_bg_gradient = """
 
@@ -65,7 +66,9 @@ st.markdown(tansbuttonbg1, unsafe_allow_html=True)
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
-
+def load_lotties(filepath: str):
+    with open(filepath, 'r') as f:
+        return json.load(f)
 
 def load_lottie(link):
     r = requests.get(link)
@@ -81,8 +84,8 @@ def css(filename):
 css("style/style.css")
 
 #loading assets
-
 lottie_gif = load_lottie("https://assets7.lottiefiles.com/packages/lf20_3rwasyjy.json")
+lottie_gif_2 = load_lotties('lottie_files/Animation - 1698854547620.json')
 python_lottie = load_lottie("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
 java_lottie = load_lottie("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
 swift_lottie = load_lottie("https://assets3.lottiefiles.com/packages/lf20_inopzfvq.json")
@@ -98,16 +101,20 @@ img_proj1 = Image.open("images/FRIDAY.png")
 img_proj2 = Image.open("images/1.png")
 gireverb = Image.open("images/gitreverb.png")
 github_card = Image.open("images/gitcardmain.png")
-
         
         
-options = st.selectbox(
-    'Choose a chapter below',
-    ('Achievments', 'Education', 'Contact', 'My skills', 'Resume'),
-    # placeholder='Home'
-    index=None,
-)
+# options = st.selectbox(
+#     'Choose a chapter below',
+#     ('Achievments', 'Education', 'Contact', 'My Skills', 'Resume', 'Projects'),
+#     # placeholder='Home'
+#     index=None,
+# )
 
+selected= ""
+with st.sidebar:
+    
+    selected = option_menu("Table of Contents", ["Education", "Projects", "My Skills", "Achievements", "Connect with me", "Resume", "Hobbies and Interests"], icons=["backpack", "","", "", "", "", ""], menu_icon="cast", default_index=1)
+                          
 
 
 
@@ -133,37 +140,44 @@ with st.container():
         st.write('##')
         st.write(
             """
+            
             Currently I am in my 1st year of B.Tech in Computer Science and Engineering
 
             - Started My Journey in the field of AI/ML last year and Explored the domain of ML and DL in Python and its Real-World Applications
 
             - Learned about Data Analytics tools in Python now on my way to explore it further
 
-            - and I have my current skillset in Python,C++,linux, Android Development (in kotlin), Git, Github
-
-            - ...
+            - I have my current skillset in Python,C++,linux, Android Development (in kotlin), Git, Github
 
             """
         )
-        st.subheader("My Github Profile")
-        st.image("https://ghchart.rshah.org/9442e3/rpj09",use_column_width=True)
+        st.write("[Explore my Github Profile](https://github.com/rpj09)")
+        st.write('##')
+       
     with right_column:
 
-        st.image(github_card,use_column_width=True)      
+         st_lottie(lottie_gif_2, width=400, height=600, key="coding2")     
+
+st.title('Add bio')
 
 
-if options == 'Connnect with Me!'  :
-    switch_page('Contact')
+if selected == 'Connect with me'  :
+    switch_page('5_Connect with me')
     
-if options == 'My Resume'  :
-    switch_page('Resume')
+if selected == 'My Resume'  :
+    switch_page('6_Resume')
 
-if options == 'Education':
-    switch_page('Education')
+if selected == 'Education':
+    switch_page('1_Education')
 
-if options == 'Achievements':
-    switch_page('Achievements')
+if selected == 'Achievements':
+    switch_page('4_Achievements')
     
-if options == 'My skills':
-    switch_page('My skills')
+if selected == 'My Skills':
+    switch_page('3_My skills')
+
+if selected == 'Projects':
+    switch_page('2_Projects')
     
+if selected == 'Hobbies and Interests':
+    switch_page('7_Hpbbies and Interests')
