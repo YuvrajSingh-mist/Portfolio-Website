@@ -5,13 +5,13 @@ from streamlit_lottie import st_lottie
 import base64
 import os
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_img_with_href(local_img_path, target_url):
     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
     bin_str = get_base64_of_bin_file(local_img_path)
@@ -92,12 +92,12 @@ css("style/style.css")
 
 
         
-options = st.selectbox(
-    'Table of Contents',
-    ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
-    # placeholder='Home'
-    index=None,
-)
+# options = st.selectbox(
+#     'Table of Contents',
+#     ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
+#     # placeholder='Home'
+#     index=None,
+# )
 
 st.markdown("<h1 style='text-align: center; color: black;'>Connect with me</h1>", unsafe_allow_html=True)
 st.divider()

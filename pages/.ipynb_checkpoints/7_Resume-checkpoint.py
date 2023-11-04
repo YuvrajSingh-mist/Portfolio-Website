@@ -70,12 +70,12 @@ def css(filename):
 css("style/style.css") 
 
         
-options = st.selectbox(
-    'Table of Contents',
-    ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
-    # placeholder='Home'
-    index=None,
-)
+# options = st.selectbox(
+#     'Table of Contents',
+#     ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
+#     # placeholder='Home'
+#     index=None,
+# )
 
 st.markdown("<h1 style='text-align: center; color: black;'>My Resume</h13>", unsafe_allow_html=True)
 st.divider()

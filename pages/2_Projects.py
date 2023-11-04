@@ -7,13 +7,13 @@ import os
 import cv2
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def get_img_with_href(local_img_path, target_url):
     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
     bin_str = get_base64_of_bin_file(local_img_path)
@@ -113,7 +113,7 @@ with st.container():
             """
         )
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
-
+st.divider()
 with st.container():
     image_column, text_column = st.columns((1, 2))
 
@@ -137,7 +137,7 @@ with st.container():
         )
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
 
-
+st.divider()
 with st.container():
     image_column, text_column = st.columns((1, 2))
 

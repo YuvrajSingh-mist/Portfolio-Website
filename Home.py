@@ -102,16 +102,10 @@ img_proj2 = Image.open("images/1.png")
 gireverb = Image.open("images/gitreverb.png")
 github_card = Image.open("images/gitcardmain.png")
         
-        
-# options = st.selectbox(
-#     'Choose a chapter below',
-#     ('Achievments', 'Education', 'Contact', 'My Skills', 'Resume', 'Projects'),
-#     # placeholder='Home'
-#     index=None,
-# )
+
 
 selected= ""
-selected = option_menu("Table of Contents", ["Home", "Education", "Projects", "My Skills", "Achievements", "Hobbies and Interests", "Connect with me", "Resume"], icons=["gear", "gear","gear", "gear", "gear", "gear", "gear", "gear"], menu_icon="cast", default_index=0, orientation='horizontal')
+selected = option_menu("Choose a chapter", ["Home","My Resume"], menu_icon="cast", default_index=0, orientation='horizontal')
                           
 
 
@@ -171,26 +165,26 @@ with st.container():
 st.divider()
 
 
-st.title('Add bio')
+# st.title('Add bio')
 
 
-if selected == 'Connect with me'  :
-    switch_page('Connect with me')
+# if selected == 'Connect with me'  :
+#     switch_page('Connect with me')
     
 if selected == 'My Resume'  :
     switch_page('Resume')
 
-if selected == 'Education':
-    switch_page('Education')
+# if selected == 'Education':
+#     switch_page('Education')
 
-if selected == 'Achievements':
-    switch_page('Achievements')
+# if selected == 'Achievements':
+#     switch_page('Achievements')
     
-if selected == 'My Skills':
-    switch_page('My skills')
+# if selected == 'My Skills':
+#     switch_page('My skills')
 
-if selected == 'Projects':
-    switch_page('Projects')
+# if selected == 'Projects':
+#     switch_page('Projects')
     
-if selected == 'Hobbies and Interests':
-    switch_page('Hpbbies and Interests')
+# if selected == 'Hobbies and Interests':
+#     switch_page('Hpbbies and Interests')

@@ -66,12 +66,12 @@ st.markdown(tansbuttonbg1, unsafe_allow_html=True)
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
         
-options = st.selectbox(
-    'Table of Contents',
-    ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
-    # placeholder='Home'
-    index=None,
-)
+# options = st.selectbox(
+#     'Table of Contents',
+#     ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
+#     # placeholder='Home'
+#     index=None,
+# )
 
 st.markdown("<h1 style='text-align: center; color: black;'>Education</h1>", unsafe_allow_html=True)
 st.divider()
