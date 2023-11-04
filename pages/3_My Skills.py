@@ -102,7 +102,13 @@ Andorid_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_fztl
 # Docker_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
 Linux_lottie = load_lottie("https://assets2.lottiefiles.com/packages/lf20_drcnxdtp.json")
 
-
+        
+options = st.selectbox(
+    'Table of Contents',
+    ('Achievments', 'Education', 'Connect with me', 'My Skills', 'Resume', 'Projects', 'Home', 'Hobbies and Interests'),
+    # placeholder='Home'
+    index=None,
+)
 
 def css(filename):
     with open(filename) as f:
