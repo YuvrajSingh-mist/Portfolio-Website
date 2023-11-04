@@ -63,36 +63,34 @@ st.markdown(tansbuttonbg1, unsafe_allow_html=True)
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
-# st.write("---")
-st.header("My Hobbies")
-st.write('##')
-st.write(
-    """
+def css(filename):
+    with open(filename) as f:
+        st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
 
-    - Like blogging and creating articles following my journey from start to finish of my projects
-    
-    - Like reading books, particularly based on growth and importance of passion and interest in life and related fields 
+css("style/style.css") 
 
-    - Volunteering in NGOs and related organisations in educational fields from STEM courses such as  math, computer science to personal hygiene, healthcare and such. 
 
-    """
-)
-
+st.markdown("<h1 style='text-align: center; color: black;'>My Resume</h13>", unsafe_allow_html=True)
 st.divider()
 
 
-# st.write("---")
-st.header("My Interests")
-st.write('##')
-st.write(
-    """
 
-    - Lies in the field of Natural Language Processing an its applicatios in real-world scenarios
-    
-    - Also fascinated about the intersection of Computer Vision and Natual Language Processing-bridging the gap between humans and machines.
+#Resume image
+# st.title("Resume")
+# st.markdown("## Yuvraj Singh")
+# res1 = Image.open("images/res1.jpg")
+# res2 = Image.open("images/res2.jpg")
+# st.image(res1, use_column_width=True)
+# st.image(res2,use_column_width=True)
 
+# PDF file URL
+# pdf_url = "https://github.com/rpj09/Portfolio/blob/master/images/rpjres.pdf?raw=true"
 
-    """
-)
+# Download button
+# if st.button("Download Resume"):
+#     response = requests.get(pdf_url)
+#     with open("rpjres.pdf", "wb") as f:
+#         f.write(response.content)
+#     st.success("Download complete!")
 
-st.divider()
+st.write('Coming Soon...')

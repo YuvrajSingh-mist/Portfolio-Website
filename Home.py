@@ -4,7 +4,7 @@ from PIL import Image
 from streamlit_lottie import st_lottie
 from streamlit_extras.switch_page_button import switch_page
 import json
-from streamlit_option_enu import option_menu
+from streamlit_option_menu import option_menu
 
 pg_bg_gradient = """
 
@@ -111,9 +111,7 @@ github_card = Image.open("images/gitcardmain.png")
 # )
 
 selected= ""
-with st.sidebar:
-    
-    selected = option_menu("Table of Contents", ["Education", "Projects", "My Skills", "Achievements", "Connect with me", "Resume", "Hobbies and Interests"], icons=["backpack", "","", "", "", "", ""], menu_icon="cast", default_index=1)
+selected = option_menu("Table of Contents", ["Home", "Education", "Projects", "My Skills", "Achievements", "Hobbies and Interests", "Connect with me", "Resume"], icons=["gear", "gear","gear", "gear", "gear", "gear", "gear", "gear"], menu_icon="cast", default_index=0, orientation='horizontal')
                           
 
 
@@ -125,19 +123,6 @@ with st.container():
         st.subheader("Hi, Myself Yuvraj Singh :wave:")
         st.subheader("An AI/ML enthusiast with a deep interest in NLP")
         st.write("I am passionate about learning different techniques/algorithms and finding ways to tackle chalnneging problems solve it using the domain of AI/ML using python")
-
-        # st.write("[Explore more about my work on github ](https://github.com/YuvrajSingh-mist)")
-
-with right_column:
-    st_lottie(lottie_gif, height=400, key="coding")
-
-with st.container():
-    column_widths = [2, 1]
-    left_column,right_column = st.columns(column_widths)
-    with left_column:
-        st.write("---")
-        st.header("About Me")
-        st.write('##')
         st.write(
             """
             
@@ -151,33 +136,61 @@ with st.container():
 
             """
         )
-        st.write("[Explore my Github Profile](https://github.com/rpj09)")
+
+        # st.write("[Explore more about my work on github ](https://github.com/YuvrajSingh-mist)")
+
+with right_column:
+    st_lottie(lottie_gif, height=400, key="coding")
+
+with st.container():
+    column_widths = [2, 1]
+    left_column,right_column = st.columns(column_widths)
+    with left_column:
+        st.write("---")
+        st.header("About Me")
+        st.write('##')
+#         st.write(
+#             """
+            
+#             Currently I am in my 1st year of B.Tech in Computer Science and Engineering
+
+#             - Started My Journey in the field of AI/ML last year and Explored the domain of ML and DL in Python and its Real-World Applications
+
+#             - Learned about Data Analytics tools in Python now on my way to explore it further
+
+#             - I have my current skillset in Python,C++,linux, Android Development (in kotlin), Git, Github
+
+#             """
+#         )
+        # st.write("[Explore my Github Profile](https://github.com/rpj09)")
         st.write('##')
        
     with right_column:
 
-         st_lottie(lottie_gif_2, width=400, height=600, key="coding2")     
+         st_lottie(lottie_gif_2, width=600, height=600, key="coding2")     
+st.divider()
+
 
 st.title('Add bio')
 
 
 if selected == 'Connect with me'  :
-    switch_page('5_Connect with me')
+    switch_page('Connect with me')
     
 if selected == 'My Resume'  :
-    switch_page('6_Resume')
+    switch_page('Resume')
 
 if selected == 'Education':
-    switch_page('1_Education')
+    switch_page('Education')
 
 if selected == 'Achievements':
-    switch_page('4_Achievements')
+    switch_page('Achievements')
     
 if selected == 'My Skills':
-    switch_page('3_My skills')
+    switch_page('My skills')
 
 if selected == 'Projects':
-    switch_page('2_Projects')
+    switch_page('Projects')
     
 if selected == 'Hobbies and Interests':
-    switch_page('7_Hpbbies and Interests')
+    switch_page('Hpbbies and Interests')

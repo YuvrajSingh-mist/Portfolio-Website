@@ -67,7 +67,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 
-st.markdown("<h1 style='text-align: center; color: black;'>Educational Details</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Education</h1>", unsafe_allow_html=True)
 st.divider()
 
 def data_upload(file):

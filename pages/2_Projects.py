@@ -2,7 +2,26 @@ import requests
 import streamlit as st
 from PIL import Image
 from streamlit_lottie import st_lottie
+import base64
+import os
+import cv2
 
+
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+@st.cache(allow_output_mutation=True)
+def get_img_with_href(local_img_path, target_url):
+    img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
+    bin_str = get_base64_of_bin_file(local_img_path)
+    html_code = f'''
+        <a href="{target_url}">
+            <img src="data:image/{img_format};base64,{bin_str}" />
+        </a>'''
+    return html_code
 pg_bg_gradient = """
 
 <style>
@@ -56,25 +75,6 @@ hide_streamlit_style = """
 #background-image: linear-gradient(to right top, #f4bedc, #e7b8df, #d7b2e3, #c3aee6, #acabe8, #979edb, #8192cd, #6c86bf, #596ea2, #465786, #33416b, #212c51);
 
 
-
-# python_lottie = load_lottie("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
-# java_lottie = load_lottie("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
-# swift_lottie = load_lottie("https://assets3.lottiefiles.com/packages/lf20_inopzfvq.json")
-# my_sql_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
-# git_lottie = load_lottie("https://assets9.lottiefiles.com/private_files/lf30_03cuemhb.json")
-# github_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
-# Andorid_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_fztluxdp.json")
-# Docker_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
-# Linux_lottie = load_lottie("https://assets2.lottiefiles.com/packages/lf20_drcnxdtp.json")
-# Xcode_lottie = load_lottie("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
-# firebase_lottie = load_lottie("https://assets5.lottiefiles.com/private_files/lf30_52jsgl4a.json")
-img_proj1 = Image.open("movies-mania.png")
-img_proj2 = Image.open("")
-img_proj3 = Image.open()
-# gireverb = Image.open("images/gitreverb.png")
-# github_card = Image.open("images/gitcardmain.png")
-
-
 #setting configurations
 st.set_page_config(page_title="Yuvraj Singh Portfolio",layout="wide",initial_sidebar_state="expanded")
 st.markdown(pg_bg_gradient, unsafe_allow_html=True)
@@ -91,11 +91,15 @@ css("style/style.css")
 
 
 with st.container():
-    st.write("---")
     st.header("My Projects")
+    st.divider()
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_proj1)
+        image = cv2.imread('images/MoviesManiaLogo.png')
+        image = cv2.resize(image, (256, 256))
+        cv2.imwrite('images/MoviesMania.png',image)
+        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
+        st.markdown(gif_html, unsafe_allow_html=True)
 
     with text_column:
         st.subheader("Movie Recommendation System- MoviesMania")
@@ -108,27 +112,41 @@ with st.container():
             ~and for developers who want to contribute there is always a place
             """
         )
-        st.markdown("[Checkout the project source code here...](https://github.com/YuvrajSingh-mist/MoviesMania)")
+        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
 
 with st.container():
     image_column, text_column = st.columns((1, 2))
 
     with image_column:
-        st.image(img_proj2)
-
+        image = cv2.imread('images/MoviesManiaLogo.png')
+        image = cv2.resize(image, (128, 128))
+        cv2.imwrite('images/MoviesMania.png',image)
+        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
+        st.markdown(gif_html, unsafe_allow_html=True)
     with text_column:
 
-        st.subheader("My personal portfolio website")
+        st.subheader("Portfolio Website")
+        st.write("Wanna make your life easier , I've got something for you")
+        st.write(
+            """
+            ~Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
+            From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
 
-        st.markdown("[Checkout the project source code here...](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
+            ~and for developers who want to contribute there is always a place
+            """
+        )
+        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
 
 
 with st.container():
     image_column, text_column = st.columns((1, 2))
 
     with image_column:
-        st.image(img_proj3, width=200)
-
+        image = cv2.imread('images/MoviesManiaLogo.png')
+        image = cv2.resize(image, (128, 128))
+        cv2.imwrite('images/MoviesMania.png',image)
+        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
+        st.markdown(gif_html, unsafe_allow_html=True)
     with text_column:
 
         st.subheader("Fahion Recommendation System- FashionX")
@@ -138,5 +156,5 @@ with st.container():
         """)
 
 
-        st.markdown("[Checkout the project source cAutomateode here...](https://github.com/YuvrajSingh-mist/FashionX)")
+        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/FashionX)")
 
