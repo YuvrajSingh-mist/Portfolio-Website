@@ -83,4 +83,4 @@ def data_upload(file):
 
 df = data_upload('Education.csv')
 
-AgGrid(df)
+st.dataframe(df)

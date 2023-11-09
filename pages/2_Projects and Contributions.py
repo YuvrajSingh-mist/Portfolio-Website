@@ -103,13 +103,14 @@ with st.container():
 
     with text_column:
         st.subheader("Movie Recommendation System- MoviesMania")
-        st.write("Wanna make your life easier , I've got something for you")
+        # st.write("")
         st.write(
             """
-            ~Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
-            From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
+            -**Primary Goal**: To provide an interface to users to find similary movies/web-series recommendations based on an uploaded video clip/YT Short.
+            
+            -**Solution**: To make use of the various faces of actors in the provided clip and the details provided(title, genre, plot) for the prediction of movie's title (if available in the dataset) or similar movies/web-series. 
 
-            ~and for developers who want to contribute there is always a place
+            -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% acccuracy
             """
         )
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
@@ -125,14 +126,17 @@ with st.container():
         st.markdown(gif_html, unsafe_allow_html=True)
     with text_column:
 
-        st.subheader("Portfolio Website")
-        st.write("Wanna make your life easier , I've got something for you")
+        st.subheader("Multi-class News Classifier Web App")
+        # st.write("Wanna make your life easier , I've got something for you")
         st.write(
             """
-            ~Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
-            From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
+           
+           -**Primary Goal**: To provide an interface to users to find news under certain categories such as Tech, 
+            
+            -**Solution**: To make use of the various faces of actors in the provided clip and the details provided(title, genre, plot) for the prediction of movie's title (if available in the dataset) or similar movies/web-series. 
 
-            ~and for developers who want to contribute there is always a place
+            -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% acccuracy
+            -**Tools Used**: Keras, Tensorflow, MTCNN, OpenCV, Word2Vec (Word Embeddings), VGGFace, NaiveBayes, Streamlit 
             """
         )
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
@@ -151,10 +155,37 @@ with st.container():
 
         st.subheader("Fahion Recommendation System- FashionX")
         st.write("""
-        A Social Media webapp for developers to share their projects and get feedback from other developers.
-        A web app to visualize your github profile and repositories.
+        Currently in development...
         """)
 
 
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/FashionX)")
 
+st.divider()
+        
+        
+with st.container():
+    st.header("My Contributions")
+    st.divider()
+#     image_column, text_column = st.columns((1, 2))
+#     with image_column:
+#         image = cv2.imread('images/MoviesManiaLogo.png')
+#         image = cv2.resize(image, (256, 256))
+#         cv2.imwrite('images/MoviesMania.png',image)
+#         gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
+#         st.markdown(gif_html, unsafe_allow_html=True)
+
+#     with text_column:
+#         st.subheader("Movie Recommendation System- MoviesMania")
+#         st.write("Wanna make your life easier , I've got something for you")
+#         st.write(
+#             """
+#             -Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
+#             From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
+
+#             -and for developers who want to contribute there is always a place
+#             """
+#         )
+#         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
+    st.write('Coming soon...')
+st.divider()
