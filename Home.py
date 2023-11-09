@@ -143,21 +143,22 @@ with st.container():
         st.write("---")
         st.header("About Me")
         st.write('##')
-#         st.write(
-#             """
+        st.write(
+            """
             
-#             Currently I am in my 1st year of B.Tech in Computer Science and Engineering
+            - Current undergrad at IIITBBSR in Computer Science Engineering.
+            - Passionate about the field of Machine Learning and Artificial Intelligence
+            - Has interest and inclination towards the field of Natural Language Processing
+            - Has completed specializations like Machine Learning and Deep Learning Specialization  by Sir Andrew Ng.
+            - Familiar with machine learning concepts such as supervised learning, and bit of  unsupervised learning.
+            - Familiar with frameworks such as Tensorflow, Keras, opencv for building projects in the said domain
+            - Currently,  working on fashion recommendation system which inculcates certain features which could be used by the available e-commerce websites.
+            - Seeking an internship or part-time position to gain experience and learn from industry professionals. 
 
-#             - Started My Journey in the field of AI/ML last year and Explored the domain of ML and DL in Python and its Real-World Applications
-
-#             - Learned about Data Analytics tools in Python now on my way to explore it further
-
-#             - I have my current skillset in Python,C++,linux, Android Development (in kotlin), Git, Github
-
-#             """
-#         )
+            """
+        )
         # st.write("[Explore my Github Profile](https://github.com/rpj09)")
-        st.write('##')
+        # st.write('##')
        
     with right_column:
 
