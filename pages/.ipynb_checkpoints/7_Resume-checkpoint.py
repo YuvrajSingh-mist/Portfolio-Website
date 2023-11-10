@@ -87,7 +87,7 @@ st.divider()
 # Resume image
 # st.title("Resume")
 # st.markdown("## Yuvraj Singh")
-res1 = Image.open("images/Resume.png")
+res1 = Image.open("images/resume_1.png")
 # res2 = Image.open("images/res2.jpg")
 col1, col2= st.columns([2,3])
 with col1:
@@ -98,10 +98,10 @@ with col2:
 
 # PDF file URL
 st.divider()
-pdf_url = "https://drive.google.com/file/d/1gNHVBmBUZnXx_KQZcOLDo274MUIq_ztu/view?usp=sharing"
+pdf_url = "https://drive.google.com/file/d/1C6asfx8Ograhsr6MiBd8Tulg0jqhRyjz/view?usp=sharing"
 
 # Download button
-res1 = Image.open("images/Resume.png")
+res1 = Image.open("images/resume_1.png")
 # res2 = Image.open("images/res2.jpg")
 col1, col2= st.columns([2,3])
 with col1:

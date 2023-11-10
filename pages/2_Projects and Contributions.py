@@ -96,7 +96,7 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
         image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (512, 512))
+        image = cv2.resize(image, (128, 128))
         cv2.imwrite('images/MoviesMania.png',image)
         gif_html = get_img_with_href('images/MoviesMania.png', 'https://github.com/YuvrajSingh-mist/MoviesMania')
         st.markdown(gif_html, unsafe_allow_html=True)

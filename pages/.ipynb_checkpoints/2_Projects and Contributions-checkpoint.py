@@ -96,7 +96,7 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
         image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (512, 512))
+        image = cv2.resize(image, (128, 128))
         cv2.imwrite('images/MoviesMania.png',image)
         gif_html = get_img_with_href('images/MoviesMania.png', 'https://github.com/YuvrajSingh-mist/MoviesMania')
         st.markdown(gif_html, unsafe_allow_html=True)
@@ -113,7 +113,7 @@ with st.container():
 
             -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% accuracy
             
-             -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), MTCNN, NLTK, Spacy, VGGFace, OpenCV, Streamlit 
+             -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), MTCNN, NLTK, Spacy, VGGFace, OpenCV, Streamlit , Render
             """
         )
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
@@ -170,7 +170,7 @@ with st.container():
 
         -**Result**: Succesfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
             
-        -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), Bi-LSTMs, NLTK, Spacy, Streamlit 
+        -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), Bi-LSTMs, NLTK, Spacy, Streamlit, Render
      
         
         """)
