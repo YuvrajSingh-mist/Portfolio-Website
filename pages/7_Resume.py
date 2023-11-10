@@ -3,6 +3,8 @@ import streamlit as st
 from PIL import Image
 from streamlit_lottie import st_lottie
 
+import time
+
 pg_bg_gradient = """
 
 <style>
@@ -82,22 +84,46 @@ st.divider()
 
 
 
-#Resume image
+# Resume image
 # st.title("Resume")
 # st.markdown("## Yuvraj Singh")
-# res1 = Image.open("images/res1.jpg")
+res1 = Image.open("images/Resume.png")
 # res2 = Image.open("images/res2.jpg")
-# st.image(res1, use_column_width=True)
+col1, col2= st.columns([2,3])
+with col1:
+    pass
+with col2:
+    st.image(res1)
 # st.image(res2,use_column_width=True)
 
 # PDF file URL
-# pdf_url = "https://github.com/rpj09/Portfolio/blob/master/images/rpjres.pdf?raw=true"
+st.divider()
+pdf_url = "https://drive.google.com/file/d/1gNHVBmBUZnXx_KQZcOLDo274MUIq_ztu/view?usp=sharing"
 
 # Download button
-# if st.button("Download Resume"):
-#     response = requests.get(pdf_url)
-#     with open("rpjres.pdf", "wb") as f:
-#         f.write(response.content)
-#     st.success("Download complete!")
-
-st.write('Coming Soon...')
+res1 = Image.open("images/Resume.png")
+# res2 = Image.open("images/res2.jpg")
+col1, col2= st.columns([2,3])
+with col1:
+    pass
+with col2:
+#     # st.image(res1)
+#     if st.button("Download Resume"):
+#         response = requests.get(pdf_url)
+#         with open("Resume Yuvraj Singh.pdf", "wb") as f:
+#             f.write(response.content)
+    with open("pages/Resume Yuvraj Singh.pdf", "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    # st.bar(0)
+    with st.spinner('Please wait...'):
+       
+        if st.download_button(label="Export_Report",
+                            data=PDFbyte,
+                            file_name="Yuvraj Singh Resume.pdf",
+                            mime='application/octet-stream'):
+            time.sleep(1)
+            st.success('Done!')
+    # st.bar(100)
+    # st.success("Download complete!")
+st.divider()
+# st.write('Coming Soon...')

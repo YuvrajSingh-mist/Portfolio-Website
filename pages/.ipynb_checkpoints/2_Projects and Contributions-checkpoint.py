@@ -96,21 +96,22 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
         image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (256, 256))
+        image = cv2.resize(image, (512, 512))
         cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
+        gif_html = get_img_with_href('images/MoviesMania.png', 'https://github.com/YuvrajSingh-mist/MoviesMania')
         st.markdown(gif_html, unsafe_allow_html=True)
 
     with text_column:
         st.subheader("**Movie Recommendation System- MoviesMania**")
         # st.write("")
+        st.divider()
         st.write(
             """
-            -**Primary Goal**: To provide an interface to users to find similary movies/web-series recommendations based on an uploaded video clip/YT Short.
+            -**Primary Goal**: To provide an interface to users to find similar movies/web-series recommendations based on an uploaded video clip/YT Short.
             
             -**Solution**: To make use of the various faces of actors in the provided clip and the details provided(title, genre, plot) for the prediction of movie's title (if available in the dataset) or similar movies/web-series. 
 
-            -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% acccuracy
+            -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% accuracy
             
              -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), MTCNN, NLTK, Spacy, VGGFace, OpenCV, Streamlit 
             """
@@ -121,14 +122,16 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
 
     with image_column:
-        image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (128, 128))
-        cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
-        st.markdown(gif_html, unsafe_allow_html=True)
+        image = cv2.imread('images/news-web-app_3.png')
+        # image = cv2.resize(image, (128, 128))
+        # cv2.imwrite('images/news-web-app_2.png',image)
+        # gif_html = get_img_with_href('images/news-web-app_2.png', 'https://github.com/YuvrajSingh-mist/News_Multiclass_Category_Classifier')
+        # st.markdown(gif_html, unsafe_allow_html=True)
+        st.image(image)
     with text_column:
 
         st.subheader("**Multi-Class News Classifier Web App**")
+        st.divider()
         # st.write("Wanna make your life easier , I've got something for you")
         st.write(
             """
@@ -149,14 +152,16 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
 
     with image_column:
-        image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (128, 128))
-        cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
-        st.markdown(gif_html, unsafe_allow_html=True)
+        image = cv2.imread('images/Movies_Review_System_1.png')
+        # image = cv2.resize(image, (128, 128))
+        # cv2.imwrite('images/Movies_Review_System_2.png',image)
+        # gif_html = get_img_with_href('images/Movies_Review_System_1.png', 'https://github.com/YuvrajSingh-mist/Movie_Review_System')
+        # st.markdown(gif_html, unsafe_allow_html=True)
+        st.image(image)
     with text_column:
 
         st.subheader("**Movie's Review System**")
+        st.divider()
         st.write("""
         
          -**Primary Goal**: To provide an interface to users to freely lookout for movies and its reviews of their choice without having to worry about it getting spoiled alongwith sentiment analysis on reviews to get a basic understanding of the quality of the chosen movie

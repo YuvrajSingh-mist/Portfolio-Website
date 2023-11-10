@@ -81,6 +81,11 @@ def data_upload(file):
     df = pd.read_csv(file)
     return df
 
-df = data_upload('Education.csv')
+col1, col2 = st.columns([1,3])
 
-st.dataframe(df)
+with col1:
+    pass
+with col2:
+    df = data_upload('Education.csv')
+
+    st.dataframe(df)
