@@ -153,17 +153,26 @@ with st.container():
 
 
 
-    # st.subheader("Frameworks:")
-    # with st.container():
-    #     col1, col2, col3 = st.columns([1, 1, 1])
-    #     with col1:
-    #         st.image("https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg",width=70)
-    #         #st.image(Image.open('flask_logo.png').resize((100,100)), use_column_width=True)
-    #         #st.write("Flask")
-    #     with col2:
-    #         st.image("https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg",width=70)
-    #         #st.image(Image.open('django_logo.png').resize((100,100)), use_column_width=True)
-    #         #st.write("Django")
+    st.title("Frameworks/Library:")
+    with st.container():
+        col1, col2, col3 = st.columns([1, 1, 1])
+        
+        with col3:
+        # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
+        # pass
+            st.image(Image.open('images/opencv.png').resize((200,110)))
+            st.write("Opencv")
+        
+        with col2:
+            st_lottie(tf_lottie,height=100,width=100, key="docker", speed=2.5)
+            
+            # st.image(Image.open('pycharm_logo.png').resize((64,64))
+            st.write("Tensorflow")
+        with col3:
+            # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
+            # pass
+            st.image(Image.open('images/Keras.png').resize((200,110)))
+            st.write("Keras")
 
     st.title("Tools:")
     st.divider()
@@ -189,13 +198,4 @@ with st.container():
             st_lottie(Linux_lottie,height=70,width=70, key="Linux", speed=2.5)
             #st.image(Image.open('pycharm_logo.png').resize((100,100)), use_column_width=True)
             st.write("Linux")
-        with col2:
-            st_lottie(tf_lottie,height=100,width=100, key="docker", speed=2.5)
-            
-            # st.image(Image.open('pycharm_logo.png').resize((64,64))
-            st.write("Tensorflow")
-        with col3:
-            # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
-            # pass
-            st.image(Image.open('images/Keras.png').resize((64,64)))
-            st.write("Keras")
+       

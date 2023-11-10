@@ -91,7 +91,7 @@ css("style/style.css")
 
 
 with st.container():
-    st.header("My Projects")
+    st.title("My Projects")
     st.divider()
     image_column, text_column = st.columns((1, 2))
     with image_column:
@@ -102,7 +102,7 @@ with st.container():
         st.markdown(gif_html, unsafe_allow_html=True)
 
     with text_column:
-        st.subheader("Movie Recommendation System- MoviesMania")
+        st.subheader("**Movie Recommendation System- MoviesMania**")
         # st.write("")
         st.write(
             """
@@ -111,6 +111,8 @@ with st.container():
             -**Solution**: To make use of the various faces of actors in the provided clip and the details provided(title, genre, plot) for the prediction of movie's title (if available in the dataset) or similar movies/web-series. 
 
             -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% acccuracy
+            
+             -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), MTCNN, NLTK, Spacy, VGGFace, OpenCV, Streamlit 
             """
         )
         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
@@ -126,20 +128,21 @@ with st.container():
         st.markdown(gif_html, unsafe_allow_html=True)
     with text_column:
 
-        st.subheader("Multi-class News Classifier Web App")
+        st.subheader("**Multi-Class News Classifier Web App**")
         # st.write("Wanna make your life easier , I've got something for you")
         st.write(
             """
            
-           -**Primary Goal**: To provide an interface to users to find news under certain categories such as Tech, 
+           -**Primary Goal**: To provide an interface to users to find news under certain categories such as Tech, World, Business and Sports
             
-            -**Solution**: To make use of the various faces of actors in the provided clip and the details provided(title, genre, plot) for the prediction of movie's title (if available in the dataset) or similar movies/web-series. 
+            -**Solution:** Made use of the AGI news kaggle dataset and NLP-based preprocessing techniques along with custom-trained Word2Vec model alongwth Bi-LSTM model.
 
-            -**Result**: Prediction of movie's title(if available in the dataset) with 78% accuracy and similar movies with 85% acccuracy
-            -**Tools Used**: Keras, Tensorflow, MTCNN, OpenCV, Word2Vec (Word Embeddings), VGGFace, NaiveBayes, Streamlit 
+            -**Result**: Succesfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
+            
+            -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), Bi-LSTMs, NLTK, Spacy, Streamlit 
             """
         )
-        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
+        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/News_Multiclass_Category_Classifier)")
 
 st.divider()
 with st.container():
@@ -153,13 +156,22 @@ with st.container():
         st.markdown(gif_html, unsafe_allow_html=True)
     with text_column:
 
-        st.subheader("Fahion Recommendation System- FashionX")
+        st.subheader("**Movie's Review System**")
         st.write("""
-        Currently in development...
+        
+         -**Primary Goal**: To provide an interface to users to freely lookout for movies and its reviews of their choice without having to worry about it getting spoiled alongwith sentiment analysis on reviews to get a basic understanding of the quality of the chosen movie
+            
+        -**Solution:** Made use of the a Machine Learning model(sentiment analysis) using Voting Classifer(SVC+Logistic Regression) and Deep leearning model(spoiler v/s non-spoiler) using Bi-LSTMs after thorough preprocessings and custom traiend Word2Vec
+
+        -**Result**: Succesfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
+            
+        -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), Bi-LSTMs, NLTK, Spacy, Streamlit 
+     
+        
         """)
 
 
-        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/FashionX)")
+        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/Movie_Review_System)")
 
 st.divider()
         

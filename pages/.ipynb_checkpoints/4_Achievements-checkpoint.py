@@ -6,13 +6,13 @@ import cv2
 import base64
 import os
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_img_with_href(local_img_path, target_url):
     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
     bin_str = get_base64_of_bin_file(local_img_path)
@@ -91,69 +91,75 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 with st.container():
-    st.header("My Projects")
+    st.title("My Achievments")
     st.divider()
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (256, 256))
-        cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
-        st.markdown(gif_html, unsafe_allow_html=True)
+    
+    st.subheader('D3-Techno-Management Fest@ IIIT-BH')
+    st.write(
+    """
 
-    with text_column:
-        st.subheader("Movie Recommendation System- MoviesMania")
-        st.write("Wanna make your life easier , I've got something for you")
-        st.write(
-            """
-            ~Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
-            From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
+    - Bagged First Prize at the said event in the domain of AI/ML, leading, managing and co-ordinating a team of three people.
+    
+    - It was a thrilling experience was for me, leading and co-ordinating with a team consisting of students from different backgrounds and skill sets with many ups-and-downs ranging from model optimization to deployment but it was all worth it in the end. 
 
-            ~and for developers who want to contribute there is always a place
-            """
-        )
-        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
+    """
+    )
+    st.divider()
+    
+        
+      
+    st.subheader('International Rank 6 @SOF IMO')
+    st.write(
+    """
 
-with st.container():
-    image_column, text_column = st.columns((1, 2))
+    - Bagged international rank 6 at the prestigious Mathematics Olympiad conducted by SOF every year for high school students around the globe.
 
-    with image_column:
-        image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (128, 128))
-        cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
-        st.markdown(gif_html, unsafe_allow_html=True)
-    with text_column:
+    """
+    )    
+    st.divider()
+    
+        
+        
+    st.subheader('Medal of Distinction @SOF IMO')
+    st.write(
+    """
 
-        st.subheader("Portfolio Website")
-        st.write("Wanna make your life easier , I've got something for you")
-        st.write(
-            """
-            ~Search up for your favourite movies and series just from  your linux/Windows System just at your voice!
-            From sending whatsapp messages to downloading youtube video you are looking at , with just a voice command
+    - Achieved Medal of Distinction with Zonal Rank 6 in the prestigious Mathematics Olympiad conducted by SOF every year for high school students around the globe in the year 2019-2020.
 
-            ~and for developers who want to contribute there is always a place
-            """
-        )
-        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/Portfolio-Website)")
+    """
+    )    
+    st.divider()
+    
+    st.subheader('Gold Medal in National Mathematical Olympiad Contest')
+    st.write(
+    """
+    - Achieved Gold Medal in a mathematical olympiad organized by the All India Schools Mathematics Teachers Assosciation securing 93% marks overal
+     in the year 2018-19.
 
-
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-
-    with image_column:
-        image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (128, 128))
-        cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://www.linkedin.com/in/yuvraj-singh-95b203289/')
-        st.markdown(gif_html, unsafe_allow_html=True)
-    with text_column:
-
-        st.subheader("Fahion Recommendation System- FashionX")
-        st.write("""
-        A Social Media webapp for developers to share their projects and get feedback from other developers.
-        A web app to visualize your github profile and repositories.
-        """)
+    """
+    
+)
+    st.divider()
+    
+    st.subheader('Gold Medal @SOF NCO')
+    st.write(
+    """
+    - Achieved Gold Medal as a Class Topper in the prestigious Computing Olympiad conducted by SOF every year for high school students around the globe in the year 2016-2017.
 
 
-        st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/FashionX)")
+    """
+    
+)
+    st.divider()
+    
+    st.subheader('Gold Medal @SOF NSO')
+    st.write(
+    """
+    - Achieved Gold Medal as a Class Topper in the prestigious Science Olympiad conducted by SOF every year for high school students around the globe in the year 2016-2017.
+
+
+    """
+    
+)
+    st.divider()
+    
