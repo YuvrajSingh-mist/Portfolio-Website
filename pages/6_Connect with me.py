@@ -137,7 +137,8 @@ with st.expander('Contact Details 👇'):
      st.write(
             """
            - Ph. No. - 9354672378
-           - Email id- yuvraj.singh9886@outlook.com
+           - Email id- yuvraj.mist@gmail.com
+           
             """
         )
     
