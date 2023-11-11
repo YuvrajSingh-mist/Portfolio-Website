@@ -131,3 +131,13 @@ with st.expander("Thorugh Soial Media Handles 👇"):
         gif_html = get_img_with_href('images/instagram.png', 'https://www.instagram.com/yuvraj_singh_9886/')
         st.markdown(gif_html, unsafe_allow_html=True)
         # pass
+        
+with st.expander('Contact Details 👇'):
+    
+     st.write(
+            """
+           - Ph. No. - 9354672378
+           - Email id- yuvraj.singh9886@outlook.com
+            """
+        )
+    
