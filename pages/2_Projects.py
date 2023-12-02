@@ -95,12 +95,12 @@ with st.container():
     st.divider()
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        image = cv2.imread('images/MoviesManiaLogo.png')
-        image = cv2.resize(image, (128, 128))
-        cv2.imwrite('images/MoviesMania.png',image)
-        gif_html = get_img_with_href('images/MoviesMania.png', 'https://github.com/YuvrajSingh-mist/MoviesMania')
-        st.markdown(gif_html, unsafe_allow_html=True)
-
+        image = cv2.imread('images/Movies-Mania.png')
+        # image = cv2.resize(image, (256, 256))
+        # cv2.imwrite('images/MoviesMania.png',image)
+        # gif_html = get_img_with_href('images/MoviesMania.png', 'https://github.com/YuvrajSingh-mist/MoviesMania')
+        # st.markdown(gif_html, unsafe_allow_html=True)
+        st.image(image)
     with text_column:
         st.subheader("**Movie Recommendation System- MoviesMania**")
         # st.write("")
@@ -181,9 +181,9 @@ with st.container():
 st.divider()
         
         
-with st.container():
-    st.header("My Contributions")
-    st.divider()
+# with st.container():
+#     st.header("My Contributions")
+#     st.divider()
 #     image_column, text_column = st.columns((1, 2))
 #     with image_column:
 #         image = cv2.imread('images/MoviesManiaLogo.png')
@@ -204,5 +204,5 @@ with st.container():
 #             """
 #         )
 #         st.markdown("[Source Code](https://github.com/YuvrajSingh-mist/MoviesMania)")
-    st.write('Coming soon...')
-st.divider()
+#     st.write('Coming soon...')
+# st.divider()
