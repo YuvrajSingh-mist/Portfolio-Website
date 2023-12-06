@@ -101,7 +101,7 @@ st.divider()
 pdf_url = "https://drive.google.com/file/d/1PEvEfGT1eZ-myO1gQ9W46c0YBq3hrU-Y/view?usp=sharing"
 
 # Download button
-res1 = Image.open("images/resume_1.png")
+res1 = Image.open("images/Resume.png")
 # res2 = Image.open("images/res2.jpg")
 col1, col2= st.columns([2,3])
 with col1:

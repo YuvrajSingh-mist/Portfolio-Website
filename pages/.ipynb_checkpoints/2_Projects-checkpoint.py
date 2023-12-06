@@ -140,7 +140,7 @@ with st.container():
             
             -**Solution:** Made use of the AGI news kaggle dataset and NLP-based preprocessing techniques along with custom-trained Word2Vec model alongwth Bi-LSTM model.
 
-            -**Result**: Succesfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
+            -**Result**: Successfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
             
             -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), Bi-LSTMs, NLTK, Spacy, Streamlit 
             """
@@ -168,7 +168,7 @@ with st.container():
             
         -**Solution:** Made use of the a Machine Learning model(sentiment analysis) using Voting Classifer(SVC+Logistic Regression) and Deep leearning model(spoiler v/s non-spoiler) using Bi-LSTMs after thorough preprocessings and custom traiend Word2Vec
 
-        -**Result**: Succesfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
+        -**Result**: Successfully built the said WebApp with streamlit as front-end. Achieved an accuracy of 91% with precision 91 % and recall 90%
             
         -**Tools Used**: Keras, Tensorflow, Word2Vec (Word Embeddings), Bi-LSTMs, NLTK, Spacy, Streamlit, Render
      
