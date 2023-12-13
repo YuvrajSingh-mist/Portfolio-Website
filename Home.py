@@ -114,19 +114,19 @@ with st.container():
     left_column,right_column = st.columns([2,1])
     with left_column:
         # st.markdown("<h3 style='text-align: center; color: black;'></h3>", unsafe_allow_html=True)
-        st.subheader("Hi, Myself Yuvraj Singh :wave:")
+        st.subheader("Hi :wave:, Myself Yuvraj Singh")
         st.subheader("An AI/ML enthusiast with a deep interest in NLP")
         st.write("I am passionate about learning different techniques/algorithms and finding ways to tackle chalnneging problems solve it using the domain of AI/ML using python")
         st.write(
             """
             
-            Currently I am in my 1st year of B.Tech in Computer Science and Engineering
+            Currently I am in my 1st year of B.Tech in Computer Science and Engineering at International Institute of Information Technology-Bhubhneshwar
 
-            - Started My Journey in the field of AI/ML last year and Explored the domain of ML and DL in Python and its Real-World Applications
+            - Started My Journey in the field of AI/ML last year and explored the domain primarily in Python and its Real-World Applications
 
-            - Learned about Data Analytics tools in Python now on my way to explore it further
+            - Explored the domain of Natural Language Processing and Computer Vision and built projects with their combination.
 
-            - I have my current skillset in Python,C++,linux, Android Development (in kotlin), Git, Github
+            - My current interest lies in the domain of NLP and LLMs and resrach based work in that domain
 
             """
         )
@@ -137,7 +137,7 @@ with right_column:
     st_lottie(lottie_gif, height=400, key="coding")
 
 with st.container():
-    column_widths = [2, 1]
+    column_widths = [2, 2]
     left_column,right_column = st.columns(column_widths)
     with left_column:
         st.write("---")
@@ -146,14 +146,12 @@ with st.container():
         st.write(
             """
             
-            - Current undergrad at IIITBBSR in Computer Science Engineering.
-            - Passionate about the field of Machine Learning and Artificial Intelligence
-            - Has interest and inclination towards the field of Natural Language Processing
-            - Has completed specializations like Machine Learning and Deep Learning Specialization  by Sir Andrew Ng.
-            - Familiar with machine learning concepts such as supervised learning, and bit of  unsupervised learning.
-            - Familiar with frameworks such as Tensorflow, Keras, opencv for building projects in the said domain
-            - Currently,  working on fashion recommendation system which inculcates certain features which could be used by the available e-commerce websites.
-            - Seeking an internship or part-time position to gain experience and learn from industry professionals. 
+            - I am an Artificial Intelligence and Machine Learning enthusiast undergrad student (CSE) in India with a deep interest for Natural Language Processing and its applications, currently having an inclination towards research, especially in the field of NLP. 
+
+            - For the past few months, I have been working continuously and exploring new fields and domains in the field of Machine Learning and Deep Learning, especially regarding various Natural Language Processing techniques and models such as LSTMs, Bi-LSTMs, CNNs, RNNs and several advanced models and technologies such as Encoder-Decoders, Autoencoders, Attention mechanism and currently exploring Transformers and Large Language Models(LLMs).
+
+            - I aim to bridge the gap between humans and machines by harnessing the power of AI, my very reason when I stepped into this field.
+
 
             """
         )
@@ -162,7 +160,7 @@ with st.container():
        
     with right_column:
 
-         st_lottie(lottie_gif_2, width=600, height=600, key="coding2")     
+         st_lottie(lottie_gif_2, width=800, height=800, key="coding2")     
 st.divider()
 
 
@@ -189,3 +187,5 @@ if selected == 'My Resume'  :
     
 # if selected == 'Hobbies and Interests':
 #     switch_page('Hpbbies and Interests')
+
+st.divider()

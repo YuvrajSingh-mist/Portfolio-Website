@@ -93,7 +93,7 @@ def load_lottie(link):
 
 
 python_lottie = load_lottie("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
-java_lottie = load_lottie("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
+# java_lottie = load_lottie("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
 tf_lottie = load_lottie("https://lottie.host/acd39f96-9bc4-4458-9fdb-00672c513334/SFJupCN6Xs.json")
 my_sql_lottie = load_lottie("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
 git_lottie = load_lottie("https://assets9.lottiefiles.com/private_files/lf30_03cuemhb.json")
@@ -133,11 +133,11 @@ with st.container():
             st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
             #st.image(Image.open('python_logo.png').resize((100,100)), use_column_width=True)
             st.write("Python")
+        # with col2:
+        #     st_lottie(java_lottie, height=70,width=70, key="kotlin", speed=4)
+        #     # st.image(Image.open('java_logo.png').resize((100,100)), use_column_width=True)
+        #     st.write("Kotlin")
         with col2:
-            st_lottie(java_lottie, height=70,width=70, key="kotlin", speed=4)
-            # st.image(Image.open('java_logo.png').resize((100,100)), use_column_width=True)
-            st.write("Kotlin")
-        with col3:
             # st_lottie(swift_lottie,height=70,width=70, key="swift", speed=2.5)
             st.image(Image.open('images/c.png').resize((64,64)))
             st.write("C")
@@ -160,7 +160,7 @@ with st.container():
         with col1:
         # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
         # pass
-            st.image(Image.open('images/opencv.png').resize((200,110)))
+            st.image(Image.open('images/opencv.png').resize((180,110)))
             st.write("Opencv")
         
         with col2:
@@ -171,7 +171,7 @@ with st.container():
         with col3:
             # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
             # pass
-            st.image(Image.open('images/Keras.png').resize((180,110)))
+            st.image(Image.open('images/Keras.png').resize((160,110)))
             st.write("Keras")
 
     st.title("Tools:")
@@ -194,8 +194,8 @@ with st.container():
             st.image("https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg",width=80)
             #st.image(Image.open('vscode_logo.png').resize((100,100)), use_column_width=True)
             st.write("VS Code")
-        with col1:
-            st_lottie(Linux_lottie,height=70,width=70, key="Linux", speed=2.5)
-            #st.image(Image.open('pycharm_logo.png').resize((100,100)), use_column_width=True)
-            st.write("Linux")
+        # with col1:
+        #     st_lottie(Linux_lottie,height=70,width=70, key="Linux", speed=2.5)
+        #     #st.image(Image.open('pycharm_logo.png').resize((100,100)), use_column_width=True)
+        #     st.write("Linux")
        
