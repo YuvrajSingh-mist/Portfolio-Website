@@ -171,7 +171,7 @@ with st.container():
         with col3:
             # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
             # pass
-            st.image(Image.open('images/Keras.png').resize((160,110)))
+            st.image(Image.open('images/Keras.png').resize((160,120)))
             st.write("Keras")
 
     st.title("Tools:")
