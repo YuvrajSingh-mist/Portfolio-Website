@@ -83,30 +83,26 @@ st.markdown("<h1 style='text-align: center; color: black;'>My Resume</h13>", uns
 st.divider()
 
 
-
+res1 = Image.open("images/Resume.png")
 # Resume image
 # st.title("Resume")
 # st.markdown("## Yuvraj Singh")
-res1 = Image.open("images/Resume.png")
+# res1 = Image.open("images/Resume.png")
 # res2 = Image.open("images/res2.jpg")
-col1, col2= st.columns([2,3])
-with col1:
-    pass
-with col2:
+left_co, cent_co,last_co = st.columns(3)
+with cent_co:
     st.image(res1)
-# st.image(res2,use_column_width=True)
-
-# PDF file URL
-st.divider()
-pdf_url = "https://drive.google.com/file/d/1PEvEfGT1eZ-myO1gQ9W46c0YBq3hrU-Y/view?usp=sharing"
+# pdf_url = "https://drive.google.com/file/d/1PEvEfGT1eZ-myO1gQ9W46c0YBq3hrU-Y/view?usp=sharing"
 
 # Download button
-res1 = Image.open("images/Resume.png")
+
 # res2 = Image.open("images/res2.jpg")
-col1, col2= st.columns([2,3])
+col1, col2, col3, col4, col5= st.columns(5)
 with col1:
     pass
 with col2:
+    pass
+with col3:
 #     # st.image(res1)
 #     if st.button("Download Resume"):
 #         response = requests.get(pdf_url)
@@ -117,7 +113,7 @@ with col2:
     # st.bar(0)
     with st.spinner('Please wait...'):
        
-        if st.download_button(label="Export_Report",
+        if st.download_button(label="Download Resume",
                             data=PDFbyte,
                             file_name="Yuvraj Singh Resume.pdf",
                             mime='application/octet-stream'):
@@ -127,3 +123,9 @@ with col2:
     # st.success("Download complete!")
 st.divider()
 # st.write('Coming Soon...')
+with col4:
+    pass
+with col5:
+    pass
+
+

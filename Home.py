@@ -188,4 +188,4 @@ if selected == 'My Resume'  :
 # if selected == 'Hobbies and Interests':
 #     switch_page('Hpbbies and Interests')
 
-st.divider()
+    # st.divider()
