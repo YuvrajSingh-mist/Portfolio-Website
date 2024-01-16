@@ -160,7 +160,7 @@ with st.container():
         with col1:
         # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
         # pass
-            st.image(Image.open('images/opencv.png').resize((180,110)))
+            st.image(Image.open('images/opencv.png').resize((100,64)))
             st.write("Opencv")
         
         with col2:
@@ -171,7 +171,7 @@ with st.container():
         with col3:
             # st.image("https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-ar21.svg",width=160)
             # pass
-            st.image(Image.open('images/Keras.png').resize((160,120)))
+            st.image(Image.open('images/Keras.png').resize((100,64)))
             st.write("Keras")
 
     st.title("Tools:")
