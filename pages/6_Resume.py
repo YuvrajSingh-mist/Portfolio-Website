@@ -83,7 +83,8 @@ st.markdown("<h1 style='text-align: center; color: black;'>My Resume</h13>", uns
 st.divider()
 
 
-res1 = Image.open("images/Resume.png")
+res1 = Image.open("images/Resume-1.png")
+res2 = Image.open("images/Resume-2.png")
 # Resume image
 # st.title("Resume")
 # st.markdown("## Yuvraj Singh")
@@ -92,6 +93,9 @@ res1 = Image.open("images/Resume.png")
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image(res1)
+# pdf_url = "https://drive.google.com/file/d/1PEvEfGT1eZ-myO1gQ9W46c0YBq3hrU-Y/view?usp=sharing"
+with last_co:
+    st.image(res2)
 # pdf_url = "https://drive.google.com/file/d/1PEvEfGT1eZ-myO1gQ9W46c0YBq3hrU-Y/view?usp=sharing"
 
 # Download button
@@ -108,7 +112,7 @@ with col3:
 #         response = requests.get(pdf_url)
 #         with open("Resume Yuvraj Singh.pdf", "wb") as f:
 #             f.write(response.content)
-    with open("pages/Resume Yuvraj Singh.pdf", "rb") as pdf_file:
+    with open("pages/Resume-Yuvraj-Singh.pdf", "rb") as pdf_file:
         PDFbyte = pdf_file.read()
     # st.bar(0)
     with st.spinner('Please wait...'):
