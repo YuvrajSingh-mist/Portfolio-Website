@@ -1,0 +1,286 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{graphicx} % Required for including images
+\usepackage{tikz} % Required for drawing custom shapes
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  % \vspace{-4pt}
+  \color{gray}
+  \item
+ 
+\end{flushright}
+
+% Photo% \begin{tikzpicture}[remember picture, overlay]
+%     \node[anchor=north east, inner sep=0pt] at (current page.north east) {\includegraphics[width=2cm]{YuvraSingh_photo.jpg}};
+% \end{tikzpicture}
+
+\begin{center}
+    \textbf{\Huge \scshape Yuvraj Singh} \\ \vspace{8pt}
+    \small 
+    \faIcon{github}
+    \href{https://github.com/YuvrajSingh-mist}{\underline{Github}} 
+    \faIcon{code}
+    \href{https://yuvrajsingh-mist.github.io/yuvraj-singh-portfolio.github.io/}
+    {\underline{Website}} 
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/in/yuvraj-singh9886/}{\underline{Linkedin}} 
+    \faIcon{envelope}
+    \href{mailto:yuvraj.mist@gmail.com}
+    {\underline{yuvraj.mist@gmail.com}}
+
+     \faIcon{phone}
+    \href{+919354672378}{\underline{+919354672378}} 
+    
+\end{center}
+
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+         \resumeProjectHeading
+          {\textbf{IISER, Kolkata} $|$ \footnotesize\emph{Research intern}\vspace{8pt}}{May 2024 -- Present}
+         \resumeItemListStart
+            \resumeItem{Working under Prof. Kripabandhu Ghosh on exploring Fine-tuning LLMs and Using GenAI Models on Medical and Finance Data for QnA}
+         \resumeItemListEnd
+
+          
+         \resumeProjectHeading
+          {\textbf{AIISC} $|$ \footnotesize\emph{Research intern}\vspace{8pt}}{March. 2024 -- Present}
+         \resumeItemListStart
+             \resumeItem{Working with Prof. Amitava Das on Prevention of Hallucination in LLMs}
+            \resumeItem{Part of the Data Generation Team- Conduct Collecting, performing Data Analysis and reformation to be used by various RL-based models for idea testing.}
+          \resumeItemListEnd
+
+          \resumeProjectHeading
+          {\textbf{Clinical AI Assistance} $|$ \footnotesize\emph{Research intern}\vspace{8pt}}{Dec. 2023 -- March 2024}
+         \resumeItemListStart
+            \resumeItem{Worked closely with the Research Team for the main project, building dataset and testing the model's generated output with other Text Generative tools like GPT etc.}
+             \resumeItem{Used HuggingFace API to use various LLMs to test our generated response to the original ones}
+            \resumeItem{Data Gathering and cleaning and performing Data Analysis on the generated output to view model's efficiency}
+          \resumeItemListEnd
+
+          
+
+
+    
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     \textbf{Languages}{: C++, Python, Dart} \\
+     
+     \textbf{Frameworks}{: Tensorflow, Keras, Flutter, Flask} \\
+      \textbf{NLP}{: RNN, LSTM, Bi-LSTM, Word2Vec, Fasttext, LLMs}\\
+     \textbf{Machine Learning}{: Supervised and Unsupervised Algorithms} \\
+      \textbf{Deep Learning}{: ANN, Seq2Seq (Encoder-Decoder), Autoencoders}\\
+      \textbf{Computer Vision}{: CNN, OpenCV, YOLOv8, Vision Transformer}\\
+        \textbf{Tools}{: Streamlit, Git, Github, HuggingFace, Firebase, OpenAI API, Gemini API}\\
+     % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+     
+     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     
+    }}
+ \end{itemize}
+
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+    
+    \resumeSubHeadingListStart
+
+    
+    \resumeProjectHeading
+        {\ \href{https://github.com/YuvrajSingh-mist/PlogPayouts}{\textbf{PlogPayouts (Google Solution Challenge '24)}} $|$ \footnotesize\emph{AI-driven Plogging System}}{2024}
+        
+        \resumeItemListStart
+            \resumeItem{\textbf {Role}: Backend (AI/ML+Server)}
+            
+            \resumeItem{\textbf {Vision/Goal}: To bring about an effective change in the garbage collection process and also tackle the social stigma regarding the position and work of garbage collectors to harbour a cleaner and greener environment, working together without any social differences.}
+            
+            \resumeItem{\textbf {Solution}: Detection, classification and counting of garbage collected by the users for which redeemable coins are rewarded in exchange for their hard work, lowering the need for post-garbage processing while being the garbage collectors themselves doing a part of their daily activity-jogging.}
+            
+            \resumeItem{\textbf {Tools}: Flutter, HTML, CSS JavaScript, Bootstrap,  Flask, Python , Django , Keras, OpenCV, YOLOv8,  Firebase Firestore, Realtime Database, Storage, GCP APIs,Mapbox, Render, Docker}
+     \resumeItemListEnd
+
+        
+    
+     \resumeProjectHeading
+        {\ \href{https://github.com/YuvrajSingh-mist/Insight-Ed/tree/main}{\textbf{Insight-Ed (HackNITR 5.0)}} $|$ \footnotesize\emph{EdTech Platform for Student and Teacher}}{2024}
+        
+        \resumeItemListStart
+            \resumeItem{\textbf {Role}: Backend (AI/ML+Server)}
+            \resumeItem{\textbf {Vision/Goal}: Our solution tries to bridge the knowledge gap between a teacher and a student in online classes by leveraging the power of AI to provide the teacher and student with insights to better prepare themselves for the course/lecture.}
+            
+            \resumeItem{\textbf {Solution}: Implemented features such as-
+            Detection of Emotion and Attentiveness of a Student for better understanding of student's understanding of a topic, Topic Modelling to know exactly where he/she lost attention, QnA with uploaded PDFs (Handwritten/Printed) along with any Videos/Tutorials and Reverse Video Search to quickly look for any concepts in the same. }
+            
+            \resumeItem{\textbf {Tools}: Flask, Python, Gemini API, Whisper API, HuggingFace Open-Source Models (EmotionLLM), MTCNN, LangChain, Cloud Run, GCP(VM)}
+          \resumeItemListEnd
+
+
+            
+    \resumeProjectHeading
+        {\href{https://github.com/YuvrajSingh-mist/MoviesMania}{\textbf{MoviesMania}} $|$ \footnotesize\emph{A Reverse Search based Movies Recommendation System(Geek-o-thon @IIIT-BH)}}{2023}
+        
+        \resumeItemListStart
+            \resumeItem{\textbf {Role}: Team Lead}
+            
+            \resumeItem{\textbf {Vision/Goal}: To provide an interface to users to find similar movies/web-series recommendations based on an uploaded video clip/YT Short.}
+            
+            \resumeItem{\textbf {Solution}: To make use of the various faces of actors in the provided clip and the details provided(title, genre, plot) for the prediction of the movie's title (if available in the dataset) or similar movies/web series.}
+            
+            \resumeItem{\textbf {Result}: Prediction of movie's title(if available in the dataset) with 78\% accuracy and similar movies with 85\% accuracy. }
+            
+            \resumeItem{\textbf {Tools}: Keras, Tensorflow, Word2Vec (Word Embeddings), MTCNN, NLTK, Spacy, VGGFace, OpenCV, Streamlit, Render}
+            
+         
+          \resumeItemListEnd
+
+
+
+
+        
+
+       
+
+    
+          
+    \resumeSubHeadingListEnd
+
+    % -------------------- ACHIEVEMENTS --------------------
+
+\section{Achievements}
+
+    \resumeProjectHeading
+      {\textbf{Finalist @YESIST12 '24- Special Track}\vspace{5pt}}{2024}
+      {\small{Led the winning project (PlogPayouts) at YESIST12 '24 under Special Track category}}
+      
+      \resumeProjectHeading
+      {\textbf{Geek-o-thon (D3 @IIIT-BH) }\vspace{5pt}}{2023}
+      {\small{Led the winning project (MoviesMania) at D3 2023, inter-college hackathon in AI/ML domain}}
+
+
+
+    \resumeSubHeadingListEnd 
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Institute of Information Technology Bhubaneswar}{June 2027}
+      {BTech Computer Science Engineering }{CGPA: 7.94(1st Semester)}
+    \resumeSubheading
+       {Delhi Public School}{2022-23}
+      {CBSE Grade 12}{Percentage: 91}
+   \resumeSubheading
+     {Amity International School}{2021-22}
+     {CBSE Grade 10}{Percentage: 96}
+
+  \resumeSubHeadingListEnd
+
+
+
+
+
+\end{document}
